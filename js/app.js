@@ -21,7 +21,7 @@ let tie = false
 /*------------------------ Cached Element References ------------------------*/
 
 const squareEls = document.querySelectorAll('.sqr')
-const messageEl = document.querySelector('.message')
+const messageEl = document.querySelector('#message')
 const resetBtnEl = document.querySelector('#reset')
 
 /*-------------------------------- Functions --------------------------------*/
@@ -70,7 +70,7 @@ if (winner) return
     
 if (!board.includes('')) {
         tie = true
-        messageEl.textContent = "Its a tie!"
+        message = "Its a tie!"
     }
     console.log('Tie state:', tie)
 }
