@@ -39,7 +39,7 @@ squareEls.forEach((square) => {
     square.style.color = 'black'
 })
 
-messageEl.textContent = `Player ${turn}'s turn`
+message = `Player ${turn}'s turn`
 
 squareEls.forEach((square, index) => {
     square.id = index
@@ -59,7 +59,7 @@ const [a, b, c] = winningCombos[i]
 
 if (board[a] !== '' && board[a] === board[b] && board[a] === board[c]) {
     winner = true
-    messageEl.textContent = `Player ${board[a]} wins!`
+    message = `Player ${board[a]} wins!`
     return
 }
     }
@@ -111,11 +111,11 @@ const updateBoard = () => {
 }
 const updateMessage = () => {
     if(winner) {
-    messageEl.textContent = `Player ${turn} wins!`
+    message = `Player ${turn} wins!`
     } else if (tie) {
-    messageEl.textContent = "Its a tie!"
+    message = "Its a tie!"
     } else {
-    messageEl.textContent = `Player ${turn} turn`
+    message = `Player ${turn} turn`
     }
 }
 
